@@ -2,6 +2,9 @@
 
 A minimal ethereum javascript wallet.
 
+This a fork of the original [LightWallet from Consensys](https://github.com/ConsenSys/eth-lightwallet). The main changes from the original
+version is a fix to BIP39 derivation in order to be fully compliant to the standard, and the support of many languages dictionaries.
+
 ## About
 
 LightWallet is a HD wallet that can store your private keys encrypted in the browser to allow you to run Ethereum dapps even if you're not running a local Ethereum node. It uses [BIP32][] and [BIP39][] to generate an HD tree of addresses from a randomly generated 12-word seed.
@@ -9,10 +12,6 @@ LightWallet is a HD wallet that can store your private keys encrypted in the bro
 LightWallet is primarily intended to be a signing provider for the [Hooked Web3 provider](https://github.com/ConsenSys/hooked-web3-provider) through the `keystore` module. This allows you to have full control over your private keys while still connecting to a remote node to relay signed transactions. Moreover, the `txutils` functions can be used to construct transactions when offline, for use in e.g. air-gapped coldwallet implementations.
 
 The default BIP32 HD derivation path is `m/0'/0'/0'/i`.
-
-## Security
-
-Please note that LightWallet has not been through a comprehensive security review at this point. It is still experimental software, intended for small amounts of Ether to be used for interacting with smart contracts on the Ethereum blockchain. Do not rely on it to store larger amounts of Ether yet.
 
 ## Get Started
 
